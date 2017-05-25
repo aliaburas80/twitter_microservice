@@ -1,4 +1,5 @@
-const turl = require('turl');
+let tinyService = require('./src/service/tinyLink');
+
 let urls = [
     'https://www.youtube.com/watch?v=_ZCugrsIRjs',
     'https://www.youtube.com/watch?v=_ZCugrsIRjs',
@@ -9,16 +10,5 @@ let urls = [
     'https://www.youtube.com/watch?v=MzNIszbVz4s',
     'https://www.youtube.com/watch?v=mcOVzCYPuFM&t=5'
     ];
-
-
-for (let link of urls) {
-    turl.shorten(link).then(
-            (res) => {
-                console.log(res);
-            }
-        ).catch((err) => {
-            console.log(err);
-    });
-}
-
-
+tinyService(urls).then((data)=>{console.log(data);},(error)=>{console.error(error);})
+//console.log(tinyService(urls).then((data)=>{console.log(data);},(error)=>{console.log(error);}));
