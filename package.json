@@ -1,0 +1,19 @@
+{
+  "name": "twitter-service",
+  "version": "1.0.0",
+  "description": "Microsivice to send twites",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliaburas80/twitter_microservice.git"
+  },
+  "author": "Ali Abu Ras, aliaburas80@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "turl": "^1.0.1"
+  }
+}
