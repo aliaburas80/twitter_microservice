@@ -14,6 +14,8 @@
   "author": "Ali Abu Ras, aliaburas80@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "turl": "^1.0.1"
+    "post-tweet-chain": "^1.0.0",
+    "turl": "^1.0.1",
+    "twit": "^2.2.5"
   }
 }
