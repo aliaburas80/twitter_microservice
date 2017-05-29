@@ -16,8 +16,9 @@ let urls = [
     ];
 
 let isDone = false;
-let nconf = require('nconf');
 
+// load configrations file.
+let nconf = require('nconf');
 nconf.argv().env();
 nconf.file({ file: './config/config.json' });
 
@@ -67,16 +68,14 @@ let sendTweet = ()=>{
       twit: twit,
       parts: [
         link,
-        'رمضان كريم',
-        '#عيد_الاستقلال #independence71 #الاستقلال٧۱ #حب_الاردن@JordanFA @TheAFDP @FilmJordan'
+        '#muisc #army #jordan #new_year'
       ]
     };
     let opts2 = {
       twit: twit,
       parts: [
         link,
-        'رمضان كريم',
-        '#أردني_يازين_الهوية #الأردن #القوات_المسلحة_الأردنية #الجيش_العربي #امانة_عمان @RadioHalaJO'
+        '#sadmah #+18 #what #kids #learn'
       ]
     };
 
