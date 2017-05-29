@@ -1,6 +1,6 @@
 {
-  "consumer_key":"ENTER-YOUR",
-  "consumer_secret":"ENTER-YOUR",
-  "access_token":"ENTER-YOUR",
-  "access_token_secret":"ENTER-YOUR"
+  "consumer_key":"ENTER-YOUR-key",
+  "consumer_secret":"ENTER-YOUR-secret",
+  "access_token":"ENTER-YOUR-token",
+  "access_token_secret":"ENTER-YOUR-token-secret"
 }
