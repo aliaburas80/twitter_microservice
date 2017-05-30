@@ -1,8 +1,6 @@
 let tinyService    = require('./src/service/tinyLink');
 let printWait      = require('./src/service/wait');
-let config         = require('./src/service/nconf')
-let postTweetChain = require('post-tweet-chain');
-let Twit = require('twit');
+let tweeter        = require('./src/service/twitter/twitterManager')
 let tinyURLS= [];
 let urls = [
     'https://www.youtube.com/watch?v=_ZCugrsIRjs',
@@ -16,13 +14,15 @@ let urls = [
     ];
 
 let isDone = false;
-
 // load configrations file.
-let nconf = require('nconf');
-nconf.argv().env();
-nconf.file({ file: './config/config.json' });
 
 
+
+// let nconf = require('nconf');
+// nconf.argv().env();
+// nconf.file({ file: './twitter_config/config.json' });
+
+// this wait for create tiniy links
 let doPrint = ()=>{
   if(!isDone){
     printWait.doWait();
@@ -35,17 +35,11 @@ let doPrint = ()=>{
 let doFinish = ()=>{
   printWait.doFinish();
 }
-
-
-
-
 printWait.virtualConsole;
 doPrint();
 tinyService(urls).then(
     (data)=>{
       isDone=true;
-      console.log('\n');
-      console.log(data);
       tinyURLS = data;
       sendTweet();
     },(error)=>{
@@ -53,47 +47,48 @@ tinyService(urls).then(
     });
 
 
-
-let twit = new Twit({
-  consumer_key:         nconf.get('consumer_key'),
-  consumer_secret:      nconf.get('consumer_secret'),
-  access_token:         nconf.get('access_token'),
-  access_token_secret:  nconf.get('access_token_secret')
-});
+//
+// let twit = new Twit({
+//   consumer_key:         nconf.get('consumer_key'),
+//   consumer_secret:      nconf.get('consumer_secret'),
+//   access_token:         nconf.get('access_token'),
+//   access_token_secret:  nconf.get('access_token_secret')
+// });
 
 let sendTweet = ()=>{
-  for(let link of tinyURLS){
-
-    let opts1 = {
-      twit: twit,
-      parts: [
-        link,
-        '#muisc #army #jordan #new_year'
-      ]
-    };
-    let opts2 = {
-      twit: twit,
-      parts: [
-        link,
-        '#sadmah #+18 #what #kids #learn'
-      ]
-    };
-
-      postTweetChain(opts1, logDone);
-      postTweetChain(opts2, logDone);
-
-    }
+  tweeter(tinyURLS);
+  // for(let link of tinyURLS){
+  //
+  //   let opts1 = {
+  //     twit: twit,
+  //     parts: [
+  //       link,
+  //       '#muisc #army #jordan #new_year'
+  //     ]
+  //   };
+  //   let opts2 = {
+  //     twit: twit,
+  //     parts: [
+  //       link,
+  //       '#sadmah #+18 #what #kids #learn'
+  //     ]
+  //   };
+  //
+  //     postTweetChain(opts1, logDone);
+  //     postTweetChain(opts2, logDone);
+  //
+  //   }
 }
 
 
-
- let logDone = (error)=> {
-  if (error) {
-    console.log(error);
-  }
-  else {
-    console.log('All done!');
-  }
-}
+//
+//  let logDone = (error)=> {
+//   if (error) {
+//     console.log(error);
+//   }
+//   else {
+//     console.log('All done!');
+//   }
+// }
 
 //console.log(tinyService(urls).then((data)=>{console.log(data);},(error)=>{console.log(error);}));
