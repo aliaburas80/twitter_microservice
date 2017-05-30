@@ -16,6 +16,7 @@
   "dependencies": {
     "nconf": "^0.8.4",
     "post-tweet-chain": "^1.0.0",
+    "promise-while": "^1.0.1",
     "turl": "^1.0.1",
     "twit": "^2.2.5"
   }
