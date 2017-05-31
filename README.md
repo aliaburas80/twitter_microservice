@@ -15,5 +15,4 @@ You can add as many you like hashtages and links and this service will manage se
   3. Add remove hashtages<br>
      |-> open twitter_config/hashtages.js, do your magic.<br>
 ---------------------------------------------------------------------------------------------------------------------------------
-<h3>This service create by Ali Abu Ras<h3>
-<a href='mailto:aliaburas80@gmail.com>aliaburas80@gmail.com</a>
+<h3><a href="mailto:aliaburas80@gmail.com">Ali Abu Ras</a><h3>
