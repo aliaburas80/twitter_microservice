@@ -2,12 +2,12 @@
 Create microservice to manage text messages by create tinylinks and concatenate them messages with number of hashtags to meet 140 character at max.
 You can add as many you like hashtages and links and this service will manage segment messages and post them to tweeter.
 ---------------------------------------------------------------------------------------------------------------------------------
-How to use.
-  1.npm install.
-  2.npm start.
+<h1>How to use.</h1>
+  <strong>npm install</strong><br>
+  <strong>npm start</strong>
 
 
--Customiziation 
+<h2>-Customiziation<h2>
   1. Change links. 
     |-> Open index.js and change urls array.
   2. Change tweet message.
