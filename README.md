@@ -7,7 +7,7 @@ You can add as many you like hashtages and links and this service will manage se
   <strong>npm start</strong>
 
 
-<h2>-Customiziation<h2>
+<h2>-Customiziation</h2>
   1. Change links. 
     |-> Open index.js and change urls array.
   2. Change tweet message.
