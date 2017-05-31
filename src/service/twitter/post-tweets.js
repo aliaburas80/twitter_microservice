@@ -6,17 +6,18 @@ let totalDoneMessages = 0;
 let totalDuplicateMessages = 0;
 module.exports  = (msg)=>{
     messages = msg;
+    console.log('Post messages');
     postTweetChain(messages[index], logDone);
 }
 
 let logDone = (error)=> {
   if (error) {
-    //console.log('Error code: '+error.code+' status code '+error.statusCode);
+    console.log('Error code: '+error.code+' status code '+error.statusCode);
     totalDuplicateMessages++;
   }
   else {
     totalDoneMessages++;
-    //console.log('done!');
+    console.log('done! messages '+totalDoneMessages);
   }
   index++;
   if(index>=messages.length){
