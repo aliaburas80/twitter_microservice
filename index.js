@@ -4,7 +4,6 @@ let tweeter        = require('./src/service/twitter/twitterManager');
 let urls           = require('./twitter_config/links');
 let tinyURLS= [];
 
-
 let isDone = false;
 
 let doPrint = ()=>{
@@ -12,12 +11,8 @@ let doPrint = ()=>{
     printWait.doWait();
     setTimeout(doPrint,200);
   }else{
-    doFinish();
+    printWait.doFinish();
   }
-}
-
-let doFinish = ()=>{
-  printWait.doFinish();
 }
 
 printWait.virtualConsole;
@@ -28,11 +23,7 @@ tinyService(urls).then(
     (data)=>{
       isDone=true;
       tinyURLS = data;
-      sendTweet();
+      tweeter(tinyURLS);
     },(error)=>{
       console.error(error);
     });
-
-let sendTweet = ()=>{
-  tweeter(tinyURLS);
-}
