@@ -38,11 +38,11 @@ let createMessages = (hashIndex)=>{
             }
         }
         // for all links
-        for(var link in linksArray){
+        for(let link in linksArray){
           let opts = {
             twit: twitObj,
             parts: [
-              link,
+              linksArray[link],
               message,
               tweet
             ]
