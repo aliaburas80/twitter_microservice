@@ -12,7 +12,7 @@ module.exports  = (links)=>{
   nconf.file({ file: './twitter_config/config.json' });
   createTwitterInstance();
   // must now prepearing twitter message, and return array of objects
-  tweetsMessages(twit,links,hashtags,' Amazing! ').then(
+  tweetsMessages(twit,links,hashtags,' Check out these applications ').then(
     (data)=>{
       postTweets( data  );
     },(error)=>{

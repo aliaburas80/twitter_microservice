@@ -25,7 +25,5 @@ let logDone = (error)=> {
     console.log('Totale duplicate messages  '+ totalDuplicateMessages);
     return;
   }
-  setTimeout(()=>{
-    postTweetChain(messages[index], logDone);
-  },1000);
+  postTweetChain(messages[index], logDone);
 }
