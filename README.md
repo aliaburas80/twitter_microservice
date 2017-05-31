@@ -8,7 +8,7 @@ You can add as many as you like hashtages and links and this service will manage
   <strong>npm start</strong>
 
 
-<h2>-Customiziation</h2>
+<h2>Customiziation</h2>
   <ol>
   <li>
   <h3>Change links</h3>
