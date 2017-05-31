@@ -16,14 +16,12 @@ let doPrint = ()=>{
 }
 
 printWait.virtualConsole;
-
 doPrint();
-
 tinyService(urls).then(
     (data)=>{
       isDone=true;
       tinyURLS = data;
       tweeter(tinyURLS);
     },(error)=>{
-      console.error(error);
+      console.error('Tiny url service :: '+error);
     });
