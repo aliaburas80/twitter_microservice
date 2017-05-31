@@ -14,15 +14,7 @@ let urls = [
     ];
 
 let isDone = false;
-// load configrations file.
 
-
-
-// let nconf = require('nconf');
-// nconf.argv().env();
-// nconf.file({ file: './twitter_config/config.json' });
-
-// this wait for create tiniy links
 let doPrint = ()=>{
   if(!isDone){
     printWait.doWait();
@@ -46,49 +38,6 @@ tinyService(urls).then(
       console.error(error);
     });
 
-
-//
-// let twit = new Twit({
-//   consumer_key:         nconf.get('consumer_key'),
-//   consumer_secret:      nconf.get('consumer_secret'),
-//   access_token:         nconf.get('access_token'),
-//   access_token_secret:  nconf.get('access_token_secret')
-// });
-
 let sendTweet = ()=>{
   tweeter(tinyURLS);
-  // for(let link of tinyURLS){
-  //
-  //   let opts1 = {
-  //     twit: twit,
-  //     parts: [
-  //       link,
-  //       '#muisc #army #jordan #new_year'
-  //     ]
-  //   };
-  //   let opts2 = {
-  //     twit: twit,
-  //     parts: [
-  //       link,
-  //       '#sadmah #+18 #what #kids #learn'
-  //     ]
-  //   };
-  //
-  //     postTweetChain(opts1, logDone);
-  //     postTweetChain(opts2, logDone);
-  //
-  //   }
 }
-
-
-//
-//  let logDone = (error)=> {
-//   if (error) {
-//     console.log(error);
-//   }
-//   else {
-//     console.log('All done!');
-//   }
-// }
-
-//console.log(tinyService(urls).then((data)=>{console.log(data);},(error)=>{console.log(error);}));

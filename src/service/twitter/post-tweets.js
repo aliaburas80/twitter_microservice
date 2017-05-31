@@ -1,19 +1,22 @@
 /*just post tweets*/
 let postTweetChain = require('post-tweet-chain');
 let index = 0;
-
-module.exports  = (messages)=>{
-    console.log('Message-> '+messages);
+let messages=[];
+module.exports  = (msg)=>{
+    messages = msg;
     postTweetChain(messages[index], logDone);
 }
 
 let logDone = (error)=> {
   if (error) {
-    console.log('length-> '+error);
+    console.log(error.Error+ '  code: '+error.code+' status code '+error.statusCode);
   }
   else {
     console.log('done!');
-    index++;
-    postTweetChain(messages[index], logDone);
   }
+  index++;
+  if(index>=messages.length) return;
+  setTimeout(()=>{
+    postTweetChain(messages[index], logDone);
+  },1000);
 }

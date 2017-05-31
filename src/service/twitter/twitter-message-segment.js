@@ -17,8 +17,7 @@ module.exports = (twit,links,hashs,msg)=>{
   twitObj    = twit;
   return createMessages(hashIndex).then(
     (data)=>{
-      console.log('[-]');
-      console.log( data  );
+      return data
     },(error)=>{
       console.log(error);
     });
@@ -38,16 +37,19 @@ let createMessages = (hashIndex)=>{
               hashIndex++;
             }
         }
-        let opts = {
-          twit: twitObj,
-          parts: [
-            linksArray[linkIndex],
-            message,
-            tweet
-          ]
-        };
-        messagesArray.push(opts);
-        return createMessages(hashIndex);
+        // for all links
+        for(var link in linksArray){
+          let opts = {
+            twit: twitObj,
+            parts: [
+              link,
+              message,
+              tweet
+            ]
+          };
+          messagesArray.push(opts);
+        }
+        return resolve(createMessages(hashIndex));
     }
   });
 }
