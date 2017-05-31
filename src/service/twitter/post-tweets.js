@@ -11,14 +11,12 @@ module.exports  = (msg)=>{
 
 let logDone = (error)=> {
   if (error) {
-    console.log('Error code: '+error.code+' status code '+error.statusCode);
-    if(error.code === '187'){
-      totalDuplicateMessages++;
-    }
+    //console.log('Error code: '+error.code+' status code '+error.statusCode);
+    totalDuplicateMessages++;
   }
   else {
     totalDoneMessages++;
-    console.log('done!');
+    //console.log('done!');
   }
   index++;
   if(index>=messages.length){
