@@ -9,7 +9,7 @@ module.exports  = (msg)=>{
 
 let logDone = (error)=> {
   if (error) {
-    console.log(error.Error+ '  code: '+error.code+' status code '+error.statusCode);
+    console.log('Error code: '+error.code+' status code '+error.statusCode);
   }
   else {
     console.log('done!');
