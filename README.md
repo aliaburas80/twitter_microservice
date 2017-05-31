@@ -3,8 +3,8 @@ Create microservice to manage text messages by create tinylinks and concatenate 
 You can add as many you like hashtages and links and this service will manage segment messages and post them to tweeter.
 ---------------------------------------------------------------------------------------------------------------------------------
 How to use.
-  1.npm install
-  2.npm start
+  1.npm install.
+  2.npm start.
 
 
 -Customiziation 
