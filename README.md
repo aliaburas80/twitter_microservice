@@ -8,11 +8,29 @@ You can add as many you like hashtages and links and this service will manage se
 
 
 <h2>-Customiziation</h2>
-  1. Change links. <br>
-    |-> Open index.js and change urls array.<br>
-  2. Change tweet message.<br>
-     |-> open service/twitter/twitterManager.js, and change promise message  tweetsMessages(twit,links,hashtags,' Amazing! ').<br>
-  3. Add remove hashtages<br>
-     |-> open twitter_config/hashtages.js, do your magic.<br>
+  <ol>
+  <li>
+  <h3>Change links</h3>
+    <p>Open index.js and change urls array.</p>
+  </li>
+  <li>
+  <h3>Change tweet message.</h3>
+    <p>open service/twitter/twitterManager.js, and change promise message  tweetsMessages(twit,links,hashtags,' Amazing! ')</p>
+  </li>
+  <li> 
+  <h3>Add remove hashtages</h3>
+    <p>open twitter_config/hashtages.js, do your magic.</p>
+  </li>
+  </ol>
+
+  
+ <h2>Dependencies</h2>
+ <ul>
+ <li><a href='https://www.npmjs.com/package/nconf'>nconf</a><li>
+ <li><a href='https://www.npmjs.com/package/post-tweet-chain'>post-tweet-chain</a><li>
+ <li><a href='https://www.npmjs.com/package/promise-while'>promise-while</a><li>
+ <li><a href='https://www.npmjs.com/package/turl'>turl</a><li>
+ <li><a href='https://www.npmjs.com/package/post-tweet-chain'>post-tweet-chain</a><li>
+ </ul>
 ---------------------------------------------------------------------------------------------------------------------------------
 <h3><a href="mailto:aliaburas80@gmail.com">Ali Abu Ras</a><h3>
