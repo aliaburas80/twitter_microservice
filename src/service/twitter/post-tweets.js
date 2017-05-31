@@ -1,4 +1,9 @@
+/*
+Ali Abu Ras aliaburas80@gmail.com
+*/
+
 /*just post tweets*/
+
 let postTweetChain = require('post-tweet-chain');
 let index = 0;
 let messages=[];

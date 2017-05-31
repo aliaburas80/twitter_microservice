@@ -1,3 +1,6 @@
+/*
+Ali Abu Ras aliaburas80@gmail.com
+*/
 /*create twitter message with allowed messages*/
 
 let messagesArray = [];
@@ -5,7 +8,6 @@ let hashsArray    = [];
 let linksArray    = []
 let message       = '';
 let hashIndex     = 1;
-let linkIndex     = 0;
 let twitObj;
 let tweet         ='';
 

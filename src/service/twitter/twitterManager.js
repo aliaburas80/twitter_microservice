@@ -1,11 +1,14 @@
+/*
+Ali Abu Ras aliaburas80@gmail.com
+*/
 /*Mange connection and be ready to send messages*/
-let nconf = require('nconf');
-let hashtags = require('./../../../twitter_config/hashtages');
+let nconf          = require('nconf');
+let hashtags       = require('./../../../twitter_config/hashtages');
 let tweetsMessages = require('./twitter-message-segment');
-let Twit = require('twit');
-let postTweets  = require('./post-tweets');
-
+let Twit           = require('twit');
+let postTweets     = require('./post-tweets');
 let twit;
+
 module.exports  = (links)=>{
   // git twitter configrations
   nconf.argv().env();
@@ -29,49 +32,3 @@ let createTwitterInstance = ()=>{
     access_token_secret:  nconf.get('access_token_secret')
   });
 }
-
-
-
-
-/*
-
-
-
-
-
-let sendTweet = ()=>{
-  for(let link of tinyURLS){
-
-    let opts1 = {
-      twit: twit,
-      parts: [
-        link,
-        '#muisc #army #jordan #new_year'
-      ]
-    };
-    let opts2 = {
-      twit: twit,
-      parts: [
-        link,
-        '#sadmah #+18 #what #kids #learn'
-      ]
-    };
-
-      postTweetChain(opts1, logDone);
-      postTweetChain(opts2, logDone);
-
-    }
-}
-
-
-
- let logDone = (error)=> {
-  if (error) {
-    console.log(error);
-  }
-  else {
-    console.log('All done!');
-  }
-}
-
-*/

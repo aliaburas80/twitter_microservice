@@ -1,3 +1,6 @@
+/*
+Ali Abu Ras aliaburas80@gmail.com
+*/
 let tinyService    = require('./src/service/tinyLink');
 let printWait      = require('./src/service/wait');
 let tweeter        = require('./src/service/twitter/twitterManager');

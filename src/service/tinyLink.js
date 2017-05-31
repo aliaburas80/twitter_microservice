@@ -1,3 +1,6 @@
+/*
+Ali Abu Ras aliaburas80@gmail.com
+*/
 /* Create tinylinks */
 const promiseWhile = require('promise-while')(Promise);
 const turl = require('turl');

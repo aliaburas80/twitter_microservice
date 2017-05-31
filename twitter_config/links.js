@@ -1,3 +1,6 @@
+/*
+Ali Abu Ras aliaburas80@gmail.com
+*/
 module.exports = [
   'https://itunes.apple.com/us/app/%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D9%83%D8%AA%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D8%A3%D8%AD%D8%B1%D9%81-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9/id907435859?ls=1&mt=8#',
   'https://itunes.apple.com/us/app/msbaha/id981670835?ls=1&mt=8#',
