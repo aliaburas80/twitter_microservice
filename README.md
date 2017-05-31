@@ -1,6 +1,7 @@
 # twitter_microservice
 This microserivce will handel post segment of messages contaion links, hanshtags and messages to tweeter and keep message length equal or less than 140 characters.
 You can add as many as you like hashtages and links and this service will manage segment messages and post them.
+*You should have account on <a href='https://dev.twitter.com/'>Twitter Developer </a>
 ---------------------------------------------------------------------------------------------------------------------------------
 <h1>How to use.</h1>
   <strong>npm install</strong><br>
