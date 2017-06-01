@@ -15,9 +15,9 @@ module.exports  = (links)=>{
   nconf.file({ file: './twitter_config/config.json' });
   createTwitterInstance();
   // must now prepearing twitter message, and return array of objects
-  tweetsMessages(twit,links,hashtags,' Check out these applications ').then(
+  tweetsMessages(twit,links,hashtags,'Github.').then(
     (data)=>{
-      postTweets( data  );
+      postTweets(twit,data);
     },(error)=>{
       console.log(error);
     });
@@ -29,6 +29,7 @@ let createTwitterInstance = ()=>{
     consumer_key:         nconf.get('consumer_key'),
     consumer_secret:      nconf.get('consumer_secret'),
     access_token:         nconf.get('access_token'),
-    access_token_secret:  nconf.get('access_token_secret')
+    access_token_secret:  nconf.get('access_token_secret'),
+    timeout_ms:           60*1000
   });
 }

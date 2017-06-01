@@ -9,26 +9,33 @@ let index = 0;
 let messages=[];
 let totalDoneMessages = 0;
 let totalDuplicateMessages = 0;
-module.exports  = (msg)=>{
+let twit;
+module.exports  = (t,msg)=>{
+    twit = t;
     messages = msg;
     console.log('Post messages');
-    postTweetChain(messages[index], logDone);
+    postTweet();
 }
 
-let logDone = (error)=> {
-  if (error) {
-    console.log('Error code: '+error.code+' status code '+error.statusCode);
-    totalDuplicateMessages++;
-  }
-  else {
-    totalDoneMessages++;
-    console.log('done! messages '+totalDoneMessages);
-  }
+let logDone = ()=> {
   index++;
   if(index>=messages.length){
-    console.log('Totale done posts          '+ totalDoneMessages);
+    console.log('Totale done posts          '+( totalDoneMessages - totalDuplicateMessages ));
     console.log('Totale duplicate messages  '+ totalDuplicateMessages);
     return;
   }
-  postTweetChain(messages[index], logDone);
+  postTweet();
+}
+
+let postTweet = ()=>{
+    twit.post('statuses/update', { status: messages[index] }, function(err, data, response) {
+      if(err){
+        console.log(err.message + '  ' +JSON.stringify(err.allErrors[0]));
+        totalDuplicateMessages++;
+      }
+      if(data){
+        totalDoneMessages++;
+      }
+    logDone();
+  });
 }
