@@ -2,6 +2,7 @@
 Ali Abu Ras aliaburas80@gmail.com
 */
 /*create twitter message with allowed messages*/
+let shuffle       = require('./../utilies/shuffle');
 let messagesArray = [];
 let hashsArray    = [];
 let linksArray    = []
@@ -14,7 +15,7 @@ let twitMaxLen    = 110;
 
 module.exports = (twit,links,hashs,msg)=>{
   // each message must be at max 140 characters
-  hashsArray = hashs.split('#');
+  hashsArray = shuffle(hashs.split('#'));
   linksArray = links;
   message    = msg;
   twitObj    = twit;

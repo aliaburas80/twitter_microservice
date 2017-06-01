@@ -28,6 +28,7 @@ let logDone = ()=> {
 }
 
 let postTweet = ()=>{
+    console.log( messages[index]);
     twit.post('statuses/update', { status: messages[index] }, function(err, data, response) {
       if(err){
         console.log(err.message + '  ' +JSON.stringify(err.allErrors[0]));
