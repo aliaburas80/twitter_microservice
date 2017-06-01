@@ -31,7 +31,7 @@ You can add as many as you like hashtages and links and this service will manage
    <li><a href='https://www.npmjs.com/package/post-tweet-chain'>post-tweet-chain</a></li>
    <li><a href='https://www.npmjs.com/package/promise-while'>promise-while</a></li>
    <li><a href='https://www.npmjs.com/package/turl'>turl</a></li>
-   <li><a href='https://www.npmjs.com/package/post-tweet-chain'>post-tweet-chain</a></li>
+   <li><a href='https://www.npmjs.com/package/twit'>twit</a></li>
  </ol>
 ---------------------------------------------------------------------------------------------------------------------------------
 <h3><a href="mailto:aliaburas80@gmail.com">Ali Abu Ras</a><h3>
