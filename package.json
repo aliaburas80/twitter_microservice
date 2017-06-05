@@ -57,7 +57,9 @@
   },
   "description": "Microsivice to send twites",
   "devDependencies": {},
-  "directories": {},
+  "directories": {
+    "test": "test"
+  },
   "dist": {
     "shasum": "69ad8bcba235b10320d7e8c9f2d6c05494296556",
     "tarball": "https://registry.npmjs.org/twitter-service/-/twitter-service-1.0.0.tgz"
@@ -78,7 +80,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.4",
+  "version": "2.0.0",
   "keywords": [
     "twitter",
     "post",
