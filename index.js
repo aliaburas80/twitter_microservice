@@ -20,7 +20,7 @@ let doPrint = ()=>{
 
 printWait.virtualConsole;
 doPrint();
-tinyService(urls).then(
+tinyService(config.links).then(
     (data)=>{
       isDone=true;
       tinyURLS = data;
