@@ -5,16 +5,13 @@ You can add as many as you like hashtages and links and this service will manage
 <h1>How to use.</h1>
   <code>npm install twitter-service</code><br>
   <P>
-  <code>
-  let twitter = require('twitter-service');<br>
-  twitter({<br>
-      "consumer_key"       :"ENTER YOUR CONSUMER KEY"       ,<br>
-      "consumer_secret"    :"ENTER YOUR CONSUMER SECRET"    ,<br>
-      "access_token"       :"ENTER YOUR ACCESS TOKEN"       ,<br>
-      "access_token_secret":"ENTER YOUR ACCESS TOKEN SECRET"<br>
-  });<br>
-
-  </code>
+  <code>let twitter = require('twitter-service');<br></code><br>
+  <code>twitter({<br></code><br>
+  <code>    "consumer_key"       :"ENTER YOUR CONSUMER KEY"       ,<br></code><br>
+  <code>    "consumer_secret"    :"ENTER YOUR CONSUMER SECRET"    ,<br></code><br>
+   <code>   "access_token"       :"ENTER YOUR ACCESS TOKEN"       ,<br></code><br>
+   <code>   "access_token_secret":"ENTER YOUR ACCESS TOKEN SECRET"<br></code><br>
+  <code>});<br></code><br>
 
 
 <h2>Customiziation</h2>
