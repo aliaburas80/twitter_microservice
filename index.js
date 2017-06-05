@@ -18,18 +18,20 @@ let doPrint = ()=>{
   }
 }
 
-printWait.virtualConsole;
-doPrint();
-tinyService(config.links).then(
-    (data)=>{
-      isDone=true;
-      tinyURLS = data;
-      tweeter(tinyURLS,config);
-    },(error)=>{
-      console.error('Tiny url service :: '+error);
-    });
-
+let init = ()=>{
+  printWait.virtualConsole;
+  doPrint();
+  tinyService(config.links).then(
+      (data)=>{
+        isDone=true;
+        tinyURLS = data;
+        tweeter(tinyURLS,config);
+      },(error)=>{
+        console.error('Tiny url service :: '+error);
+      });
+}
 
 module.exports = (twitter_config)=>{
   config = twitter_config;
+  init();
 }
