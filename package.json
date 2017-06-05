@@ -1,23 +1,89 @@
 {
-  "name": "twitter-service",
-  "version": "1.0.0",
-  "description": "Microsivice to send twites",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_args": [
+    [
+      {
+        "raw": "twitter-service",
+        "scope": null,
+        "escapedName": "twitter-service",
+        "name": "twitter-service",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "B:\\testMyPackage"
+    ]
+  ],
+  "_from": "twitter-service@latest",
+  "_id": "twitter-service@1.0.0",
+  "_inCache": true,
+  "_location": "/twitter-service",
+  "_nodeVersion": "6.9.5",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/twitter-service-1.0.0.tgz_1496566452433_0.710498767439276"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/aliaburas80/twitter_microservice.git"
+  "_npmUser": {
+    "name": "aliaburas",
+    "email": "aliaburas80@gmail.com"
   },
-  "author": "Ali Abu Ras, aliaburas80@gmail.com",
-  "license": "ISC",
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "twitter-service",
+    "scope": null,
+    "escapedName": "twitter-service",
+    "name": "twitter-service",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/twitter-service/-/twitter-service-1.0.0.tgz",
+  "_shasum": "69ad8bcba235b10320d7e8c9f2d6c05494296556",
+  "_shrinkwrap": null,
+  "_spec": "twitter-service",
+  "_where": "B:\\testMyPackage",
+  "author": {
+    "name": "Ali Abu Ras, aliaburas80@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/aliaburas80/twitter_microservice/issues"
+  },
   "dependencies": {
     "nconf": "^0.8.4",
     "post-tweet-chain": "^1.0.0",
     "promise-while": "^1.0.1",
     "turl": "^1.0.1",
     "twit": "^2.2.5"
-  }
+  },
+  "description": "Microsivice to send twites",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "69ad8bcba235b10320d7e8c9f2d6c05494296556",
+    "tarball": "https://registry.npmjs.org/twitter-service/-/twitter-service-1.0.0.tgz"
+  },
+  "homepage": "https://github.com/aliaburas80/twitter_microservice#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "aliaburas",
+      "email": "aliaburas80@gmail.com"
+    }
+  ],
+  "name": "twitter-service",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliaburas80/twitter_microservice.git"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }

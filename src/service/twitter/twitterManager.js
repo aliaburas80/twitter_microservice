@@ -8,8 +8,10 @@ let tweetsMessages = require('./twitter-message-segment');
 let Twit           = require('twit');
 let postTweets     = require('./post-tweets');
 let twit;
-
-module.exports  = (links)=>{
+let config;
+module.exports  = (links,con)=>{
+  console.log('twitter manager!');
+  config = con;
   // git twitter configrations
   nconf.argv().env();
   nconf.file({ file: './twitter_config/config.json' });
@@ -26,10 +28,10 @@ module.exports  = (links)=>{
 
 let createTwitterInstance = ()=>{
   twit = new Twit({
-    consumer_key:         nconf.get('consumer_key'),
-    consumer_secret:      nconf.get('consumer_secret'),
-    access_token:         nconf.get('access_token'),
-    access_token_secret:  nconf.get('access_token_secret'),
+    consumer_key:         config.consumer_key,
+    consumer_secret:      config.consumer_secret,
+    access_token:         config.access_token,
+    access_token_secret:  config.access_token_secret,
     timeout_ms:           60*1000
   });
 }

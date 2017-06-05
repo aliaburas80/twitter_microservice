@@ -7,6 +7,7 @@ const turl = require('turl');
 let tinyLinks =[];
 
 module.exports = ( arrOfLinks )=>{
+
   return new Promise((resolve,faile)=>{
     getAllTinLinks(arrOfLinks).then(
     (data)=> {resolve(data)},
@@ -26,9 +27,13 @@ let getAllTinLinks = (arrOfLinks)=>{
                    tinyLinks.push(res);
                    resolve(getAllTinLinks(arrOfLinks))
                  }
+               },
+               (error)=>{
+                 console.log(error);
                }
            ).catch(
              (err) => {
+               console.log('[ERROR!]');
                console.log(err);
              }
          );
