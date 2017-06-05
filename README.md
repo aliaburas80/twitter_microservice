@@ -3,8 +3,17 @@ This microserivce will handel post segment of messages contaion links, hanshtags
 You can add as many as you like hashtages and links and this service will manage segment messages and post them.
 <p>*You should have account on <a href='https://dev.twitter.com/'>Twitter Developer</a>, to get your secret and tokens to start using this service </p>
 <h1>How to use.</h1>
-  <strong>npm install</strong><br>
-  <strong>npm start</strong>
+  <code>npm install twitter-service</code><br>
+  <code>
+  let twitter = require('twitter-service');
+  twitter({
+      "consumer_key"       :"ENTER YOUR CONSUMER KEY"       ,
+      "consumer_secret"    :"ENTER YOUR CONSUMER SECRET"    ,
+      "access_token"       :"ENTER YOUR ACCESS TOKEN"       ,
+      "access_token_secret":"ENTER YOUR ACCESS TOKEN SECRET"
+  });
+
+  </code>
 
 
 <h2>Customiziation</h2>
