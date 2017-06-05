@@ -5,13 +5,19 @@ You can add as many as you like hashtages and links and this service will manage
 <h1>How to use.</h1>
   <code>npm install twitter-service</code><br>
   <P>
-  <code>let twitter = require('twitter-service');<br></code><br>
-  <code>twitter({<br></code><br>
-  <code>    "consumer_key"       :"ENTER YOUR CONSUMER KEY"       ,<br></code><br>
-  <code>    "consumer_secret"    :"ENTER YOUR CONSUMER SECRET"    ,<br></code><br>
-   <code>   "access_token"       :"ENTER YOUR ACCESS TOKEN"       ,<br></code><br>
-   <code>   "access_token_secret":"ENTER YOUR ACCESS TOKEN SECRET"<br></code><br>
-  <code>});<br></code><br>
+<code>let tw = require('twitter-service');</code><br>
+<code></code><br>
+<code>tw(twitter:{</code><br>
+<code>    "consumer_key"       :"ENTER YOUR CONSUMER KEY",</code><br>
+<code>    "consumer_secret"    :"ENTER YOUR CONSUMER SECRET",</code><br>
+<code>    "access_token"       :"ENTER YOUR ACCESS TOKEN",</code><br>
+<code>    "access_token_secret":"ENTER YOUR ACCESS TOKEN SECRET"</code><br>
+<code>  },</code><br>
+<code>  links :{[</code><br>
+<code>      'https://github.com/aliaburas80/twitter_microservice'</code><br>
+<code>    ]},</code><br>
+<code>hashtags:"#github#photooftheday#photooftheday#beautiful#fashion#instagood#love#loveit#productivity#traveltips#travelfriendly#wheretonext#weddinginvitations#weddingregistry#dreamwedding"</code><br>
+<code>);</code><br>
 
 
 <h2>Customiziation</h2>
