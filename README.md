@@ -19,7 +19,8 @@ You can add as many as you like hashtages and links and this service will manage
 <code>  links :{[</code><br>
 <code>      'https://github.com/aliaburas80/twitter_microservice'</code><br>
 <code>    ]},</code><br>
-<code>hashtags:"#github#photooftheday#photooftheday#beautiful#fashion#instagood#love#loveit#productivity#traveltips#travelfriendly#wheretonext#weddinginvitations#weddingregistry#dreamwedding"</code><br>
+<code>hashtags:"#github#photooftheday#photooftheday#beautiful#fashion#instagood",</code><br>
+<code>message:"Hello!"</code><br>
 <code>);</code><br>
 
 
