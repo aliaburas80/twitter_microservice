@@ -12,10 +12,11 @@ app.get('/',(req,res)=>{
 
 app.get('/sendTweets',(req,res)=>{
   let params = {
-    tweetConfig : req.param('config'),
-    message     : req.param('message'),
-    hashtags    : req.param('hashtags')
-  }
+    tweetConfig : req.param('config'),// obj
+    message     : req.param('message'), // string
+    hashtags    : req.param('hashtags'), // string
+    links       : req.param('links') // string splited with ,
+  };
 
   let values='';
   for( let ob in params){
