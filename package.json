@@ -11,48 +11,61 @@
         "type": "tag"
       },
       "B:\\testMyPackage"
+    ],
+    [
+      {
+        "raw": "twitter-service@^4.0.0",
+        "scope": null,
+        "escapedName": "twitter-service",
+        "name": "twitter-service",
+        "rawSpec": "^4.0.0",
+        "spec": ">=4.0.0 <5.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\AliAbuRas\\Dropbox\\express-twitter\\express-twitter-interface"
     ]
   ],
-  "_from": "twitter-service@latest",
+  "_from": "twitter-service@^4.0.0",
+  "_id": "twitter-service@4.0.0",
   "_inCache": true,
   "_location": "/twitter-service",
-  "_nodeVersion": "6.9.5",
+  "_nodeVersion": "6.9.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/twitter-service-1.0.0.tgz_1496566452433_0.710498767439276"
+    "tmp": "tmp/twitter-service-4.0.0.tgz_1501525850787_0.9606793504208326"
   },
   "_npmUser": {
     "name": "aliaburas",
     "email": "aliaburas80@gmail.com"
   },
-  "_npmVersion": "3.10.10",
+  "_npmVersion": "5.3.0",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "twitter-service",
+    "raw": "twitter-service@^4.0.0",
     "scope": null,
     "escapedName": "twitter-service",
     "name": "twitter-service",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^4.0.0",
+    "spec": ">=4.0.0 <5.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER"
+    "#USER",
+    "/"
   ],
-  "_resolved": "https://registry.npmjs.org/twitter-service/-/twitter-service-1.0.0.tgz",
-  "_shasum": "69ad8bcba235b10320d7e8c9f2d6c05494296556",
+  "_resolved": "https://registry.npmjs.org/twitter-service/-/twitter-service-4.0.0.tgz",
+  "_shasum": "da45ada8a4eb14bbe847645a837ce23f525c57e2",
   "_shrinkwrap": null,
-  "_spec": "twitter-service",
-  "_where": "B:\\testMyPackage",
-  "author": "Ali Abu Ras, aliaburas80@gmail.com",
+  "_spec": "twitter-service@^4.0.0",
+  "_where": "C:\\Users\\AliAbuRas\\Dropbox\\express-twitter\\express-twitter-interface",
+  "author": {
+    "name": "Ali Abu Ras, aliaburas80@gmail.com"
+  },
   "bugs": {
     "url": "https://github.com/aliaburas80/twitter_microservice/issues"
   },
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3",
     "nconf": "^0.8.4",
-    "nodemon": "^1.11.0",
     "post-tweet-chain": "^1.0.0",
     "promise-while": "^1.0.1",
     "turl": "^1.0.1",
@@ -64,31 +77,37 @@
     "test": "test"
   },
   "dist": {
-    "shasum": "69ad8bcba235b10320d7e8c9f2d6c05494296556",
-    "tarball": "https://registry.npmjs.org/twitter-service/-/twitter-service-1.0.0.tgz"
+    "shasum": "da45ada8a4eb14bbe847645a837ce23f525c57e2",
+    "tarball": "https://registry.npmjs.org/twitter-service/-/twitter-service-4.0.0.tgz",
+    "integrity": "sha512-DJ5T9uO13DiNFF/0jxX+MfebbOXE7AKvmnMiJ8Z5MXKObEtK5d6a2x7UAS/B8CWx8FicMpi7HuDULW3204Q7jw=="
   },
+  "gitHead": "740a2e898cf7e5923acca9f1763e739451013c81",
   "homepage": "https://github.com/aliaburas80/twitter_microservice#readme",
-  "license": "ISC",
-  "main": "index.js",
-  "maintainers": [
-    "aliaburas <aliaburas80@gmail.com>"
-  ],
-  "name": "twitter-service",
-  "optionalDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aliaburas80/twitter_microservice.git"
-  },
-  "scripts": {
-    "start": "nodemon app/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "3.0.0",
   "keywords": [
     "twitter",
     "post",
     "tinyurl",
     "messages",
     "segmant"
-  ]
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "aliaburas",
+      "email": "aliaburas80@gmail.com"
+    }
+  ],
+  "name": "twitter-service",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliaburas80/twitter_microservice.git"
+  },
+  "scripts": {
+    "start": "node init.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "4.0.0"
 }
