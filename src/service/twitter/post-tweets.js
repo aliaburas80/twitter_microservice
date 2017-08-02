@@ -16,7 +16,6 @@ let twit;
 module.exports  = (t,msg)=>{
     twit = t;
     messages = msg;
-    console.log('Post messages');
     postTweet();
 }
 
@@ -33,10 +32,10 @@ let logDone = ()=> {
 let postTweet = ()=>{
     twit.post('statuses/update', { status: messages[index] }, function(err, data, response) {
       if(err){
-          events.emit('errors',`err.message ${JSON.stringify(err.allErrors[0])}`);
+          process.emit('errors',`err.message ${JSON.stringify(err.allErrors[0])}`);
         totalDuplicateMessages++;
       }else{
-          events.emit('post',`err.message ${ messages[index]}`);
+          process.emit('post',`err.message ${ messages[index]}`);
       }
       if(data){
         totalDoneMessages++;

@@ -4,11 +4,12 @@ class MyEmitter extends EventEmitter {}
 const serviceEvents = new MyEmitter();
 
 
-serviceEvents.on('errors', (message) => {
+process.on('errors', (message) => {
     console.log(`an error occurred!  ${message}`);
 });
 
-serviceEvents.on('post', (message) => {
+process.on('post', (message) => {
+
     console.log(`an post occurred!  ${message}`);
 });
 

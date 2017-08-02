@@ -9,8 +9,8 @@ let Twit           = require('twit');
 let postTweets     = require('./post-tweets');
 let twit;
 let config;
+let events;
 module.exports  = (links,con)=>{
-  console.log('twitter manager!');
   config = con;
   hashtags = config.hashtags
   // git twitter configrations
@@ -24,7 +24,10 @@ module.exports  = (links,con)=>{
     },(error)=>{
       console.log(error);
     });
-  // when its finished then, send tweets
+
+    events =postTweets.events;
+
+    // when its finished then, send tweets
 }
 
 let createTwitterInstance = ()=>{

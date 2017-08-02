@@ -35,3 +35,14 @@ module.exports = (twitter_config)=>{
   config = twitter_config;
   init();
 }
+
+/* // to track all events globally
+process.on('post', (message) => {
+    console.log(`INDEX  ${message}`);
+});
+
+
+process.on('errors', (message) => {
+    console.log(`INDEX  ${message}`);
+});
+*/
