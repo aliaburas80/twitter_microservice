@@ -17,4 +17,9 @@ process.on('stopPost', (message) => {
     console.log('stop post');
 });
 
+process.on('allowPost', (message) => {
+    allowPost = true;
+    console.log('stop post');
+});
+
 module.exports = allowPost;
