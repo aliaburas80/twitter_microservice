@@ -25,8 +25,9 @@ let logDone = ()=> {
     console.log('Totale done posts          '+( totalDoneMessages - totalDuplicateMessages ));
     console.log('Totale duplicate messages  '+ totalDuplicateMessages);
     return;
+  }else if(events.allowPost){
+    postTweet();
   }
-  postTweet();
 }
 
 let postTweet = ()=>{
