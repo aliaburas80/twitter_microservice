@@ -32,10 +32,11 @@ let logDone = ()=> {
 let postTweet = ()=>{
     twit.post('statuses/update', { status: messages[index] }, function(err, data, response) {
       if(err){
-          process.emit('errors',`err.message ${JSON.stringify(err.allErrors[0])}`);
+        let errorMessage = `Error number = ${err.allErrors[0].code}, ${err.allErrors[0].message}`;
+        process.emit('errors',errorMessage);
         totalDuplicateMessages++;
       }else{
-          process.emit('post',`err.message ${ messages[index]}`);
+          process.emit('post',`${ messages[index]}`);
       }
       if(data){
         totalDoneMessages++;
