@@ -19,6 +19,7 @@ module.exports  = (t,msg)=>{
 let logDone = ()=> {
     index++;
     if(index>=messages.length){
+        process.emit('stopPost');
         console.log('Totale done posts          '+( totalDoneMessages - totalDuplicateMessages ));
         console.log('Totale duplicate messages  '+ totalDuplicateMessages);
         return;
