@@ -19,6 +19,7 @@ module.exports = (twit,links,hashs,msg)=>{
   linksArray = links;
   message    = msg;
   twitObj    = twit;
+
   return createMessages(hashIndex).then(
     (data)=>{
       return data
@@ -29,24 +30,29 @@ module.exports = (twit,links,hashs,msg)=>{
 
 let createMessages = (hashIndex)=>{
   return new Promise((resolve,error)=>{
-      tweet=message + ' ';
-      if(hashIndex >= hashsArray.length-1){
-        resolve( messagesArray );
+      if((linksArray.length < 1 && hashsArray.length <= 1) || (hashsArray.length <= 1)){
+        messagesArray.push(message);
+         resolve(messagesArray);
       }else{
-        while( tweet.length <= twitMaxLen ){
-            if(String('#'+hashsArray[hashIndex]+" ").length + tweet.length >= twitMaxLen){
-              break;
-            }else{
-              tweet+='#'+hashsArray[hashIndex]+" ";
-              hashIndex++;
+        tweet=message + ' ';
+        if(hashIndex >= hashsArray.length-1){
+            resolve( messagesArray );
+        }else{
+            while( tweet.length <= twitMaxLen ){
+                if(String('#'+hashsArray[hashIndex]+" ").length + tweet.length >= twitMaxLen){
+                    break;
+                }else{
+                    tweet+='#'+hashsArray[hashIndex]+" ";
+                    hashIndex++;
+                }
             }
+            // for all links
+            for(let link in linksArray){
+                let opts = linksArray[link] + ' ' +tweet;
+                messagesArray.push(opts);
+            }
+            return resolve(createMessages(hashIndex));
         }
-        // for all links
-        for(let link in linksArray){
-          let opts = linksArray[link] + ' ' +tweet;
-          messagesArray.push(opts);
-        }
-        return resolve(createMessages(hashIndex));
-    }
+     }
   });
 }
