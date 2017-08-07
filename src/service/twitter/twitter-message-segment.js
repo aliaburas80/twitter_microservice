@@ -16,6 +16,10 @@ let twitMaxLen    = 110;
 module.exports = (twit,links,hashs,msg)=>{
   // each message must be at max 140 characters
   hashsArray = shuffle(hashs.split('#'));
+  console.log(hashsArray.length)
+  if(hashsArray.length <= 1){
+      hashsArray=['nodejs','expressjs','aliaburas','angrycloud','twitter','@twitter','@ali_aburas'];
+  }
   linksArray = links;
   message    = msg;
   twitObj    = twit;
@@ -30,7 +34,7 @@ module.exports = (twit,links,hashs,msg)=>{
 
 let createMessages = (hashIndex)=>{
   return new Promise((resolve,error)=>{
-      if((linksArray.length < 1 && hashsArray.length <= 1) || (hashsArray.length <= 1)){
+      if((linksArray.length < 1 && hashsArray.length <= 1) || (hashsArray.length < 1)){
         messagesArray.push(message);
          resolve(messagesArray);
       }else{
@@ -42,7 +46,7 @@ let createMessages = (hashIndex)=>{
                 if(String('#'+hashsArray[hashIndex]+" ").length + tweet.length >= twitMaxLen){
                     break;
                 }else{
-                    tweet+='#'+hashsArray[hashIndex]+" ";
+                    tweet+=addHash(hashsArray[hashIndex])+" ";
                     hashIndex++;
                 }
             }
@@ -55,4 +59,16 @@ let createMessages = (hashIndex)=>{
         }
      }
   });
+}
+
+let addHash = (message)=>{
+    let msg = message;
+    if(message != undefined){
+        if(msg.indexOf('@')===-1){
+            msg = '#'+msg
+        }
+    }else{
+        msg = '#Islam'
+    }
+    return msg;
 }

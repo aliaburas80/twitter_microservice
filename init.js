@@ -2,14 +2,14 @@ let tw = require('./index');
 let hashTags = require('./twitter_config/hashtages');
 tw({
     "twitter":[{
-      "consumer_key"       :"kW6OtlxghN9e8VMOyCbzboKzK",
-      "consumer_secret"    :"WyRdY3184T9TLpkaKvsIn50nuApwIzETwTxuf1wUKJbGOvL9zr",
-      "access_token"       :"234758171-HCNFdi0HrkGJ9ksOkxbweDRGvJVlYYBNLaZhvmC3",
-      "access_token_secret":"VbFIwzcaf81CUyfPV3P0rF0OkeDRq2EyNTJzT5FQ0ugRu"
+      "consumer_key"       :"zP5d6zM2SWxVPhc2RxMyePmwK",
+      "consumer_secret"    :"YJqFYRTzezffUg7cqCxfCZxCCWgJ7wBsTkrCb2WiahOnsSNhle",
+      "access_token"       :"877502926859763712-WfhJ9bDEi16WLa4rNUiUqEH4p6XhbTY",
+      "access_token_secret":"Xa41QjgfWyrA2r10bu0YtMbqWMG5YeCqZFQBLynIxA9LV"
     }],
-    "links" :[],
+    "links" :['https://github.com/aliaburas80/express-twitter-interface'],
     "hashtags":'',
-    "message" :"salam "
+    "message" :" Ali-------"
 });
 
 

@@ -18,10 +18,8 @@ module.exports = ( arrOfLinks )=>{
 let index = 0;
 let getAllTinLinks = (arrOfLinks)=>{
     return new Promise ((resolve, reject) => {
-        if(arrOfLinks.length<=1){
-        console.log(' 1 ');
+        if(arrOfLinks.length<1){
         tinyLinks =[' '];
-        console.log(' 2 ');
         resolve(tinyLinks);
     }else{
         turl.shorten(arrOfLinks[index]).then(
