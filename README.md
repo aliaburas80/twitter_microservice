@@ -3,6 +3,7 @@ This microserivce will handel post segment of messages contaion links, hanshtags
 You can add as many as you like hashtages and links and this service will manage segment messages and post them.
 <p>*You should have account on <a href='https://dev.twitter.com/'>Twitter Developer</a>, to get your secret and tokens to start using this service </p>
 
+<h2>Check out the express interface for this <a href='https://github.com/aliaburas80/express-twitter-interface/tree/master' target='_blank'> microservice  </a></h2>
 <code>https://www.npmjs.com/package/twitter-service</code>
 
 <h1>How to use.</h1>
