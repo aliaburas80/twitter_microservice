@@ -5,6 +5,7 @@ Ali Abu Ras aliaburas80@gmail.com
 let shuffle       = require('./../utilies/shuffle');
 let messagesArray = [];
 let hashsArray    = [];
+let content    = [];
 let linksArray    = []
 let message       = '';
 let hashIndex     = 1;
@@ -13,13 +14,18 @@ let tweet         = '';
 let twitMaxLen    = 110;
 
 
-module.exports = (twit,links,hashs,msg)=>{
+module.exports = (twit,links,hashs,msg,cont)=>{
   // each message must be at max 140 characters
   hashsArray = shuffle(hashs.split('#'));
-  console.log(hashsArray.length)
+  content    = shuffle(cont.split(' '));
+  console.log(hashsArray)
+  console.log(content)
+  hashsArray = hashsArray.concat(content)
+  
   if(hashsArray.length <= 1){
       hashsArray=['nodejs','expressjs','aliaburas','angrycloud','twitter','@twitter','@ali_aburas'];
   }
+
   linksArray = links;
   message    = msg;
   twitObj    = twit;
@@ -55,6 +61,7 @@ let createMessages = (hashIndex)=>{
                 let opts = linksArray[link] + ' ' +tweet;
                 messagesArray.push(opts);
             }
+           
             return resolve(createMessages(hashIndex));
         }
      }
@@ -67,8 +74,6 @@ let addHash = (message)=>{
         if(msg.indexOf('@')===-1){
             msg = '#'+msg
         }
-    }else{
-        msg = '#Islam'
     }
     return msg;
 }

@@ -13,12 +13,13 @@ let events;
 module.exports  = (links,con)=>{
   config = con;
   hashtags = config.hashtags
+  content = config.content
   // git twitter configrations
   nconf.argv().env();
   nconf.file({ file: './twitter_config/config.json' });
   createTwitterInstance();
   // must now prepearing twitter message, and return array of objects
-  tweetsMessages(twit,links,hashtags,config.message).then(
+  tweetsMessages(twit,links,hashtags,config.message,content).then(
     (data)=>{
       postTweets(twit,data);
     },(error)=>{
